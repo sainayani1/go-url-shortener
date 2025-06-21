@@ -44,7 +44,6 @@ Request:
 {
   "url": "https://example.com"
 }
-
 Response (201):
 {
   "id": 1,
@@ -57,13 +56,11 @@ Response (201):
 
 2. Get Original URL
 GET /shorten/{code}
-
 Returns full short URL record and increments accessCount.
 
 
 3. Update Short URL
 PUT /shorten/{code}
-
 Request:
 {
   "url": "https://example.com/updated"
@@ -113,4 +110,5 @@ go run main.go
 
 Run tests
 go test ./shortenurl/handler -v
+```
 

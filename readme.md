@@ -31,13 +31,18 @@ url-shortener/
 └── README.md
 
 
----
+## 🚀 API Endpoints
 
-Request:
+### 1. Create Short URL
+
+**POST /shorten**
+
+#### Request
+
+```json
 {
   "url": "https://example.com"
 }
-
 Response (201):
 {
   "id": 1,
@@ -51,15 +56,23 @@ Response (201):
 2. Get Original URL
 GET /shorten/{code}
 
-Returns full short URL record and increments accessCount.
+Returns the full short URL record and increments accessCount.
 
 
 3. Update Short URL
 PUT /shorten/{code}
 
-Request:
 {
   "url": "https://example.com/updated"
+}
+Response
+{
+  "id": 1,
+  "url": "https://example.com/updated",
+  "shortCode": "abc123",
+  "accessCount": 12,
+  "createdAt": "2025-06-21T10:00:00Z",
+  "updatedAt": "2025-06-21T12:30:00Z"
 }
 
 4. Delete Short URL
@@ -69,12 +82,21 @@ Response: 204 No Content
 
 5. Get Stats
 GET /shorten/{code}
+Response
+{
+  "id": 1,
+  "url": "https://example.com",
+  "shortCode": "abc123",
+  "accessCount": 12,
+  "createdAt": "2025-06-21T10:00:00Z",
+  "updatedAt": "2025-06-21T12:30:00Z"
+}
 
 Returns full URL record with current accessCount.
 
 Setup Instructions
 
-1. Clone the repo
+1. Clone the repo using git clone
 cd url-shortener
 
 Configure Environment

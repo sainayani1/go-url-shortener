@@ -1,6 +1,7 @@
 # 🔗 URL Shortener API
 
 A simple and secure RESTful URL Shortener API built with **Go (net/http)**, **MySQL** (no ORM), and organized in **3-tier architecture** (handler, service, repository). It allows users to shorten long URLs, retrieve the original URL, update, delete, and view access statistics.
+Kindly find the project link : https://roadmap.sh/projects/url-shortening-service
 
 ---
 

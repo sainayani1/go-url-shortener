@@ -96,7 +96,7 @@ Returns full URL record with current accessCount.
 
 Setup Instructions
 
-1. Clone the repo using git clone
+1. Clone the repo using git clone { git clone https://github.com/sainayani1/go-url-shortener}
 cd url-shortener
 
 Configure Environment
